@@ -1,0 +1,393 @@
+*{
+    font-family: 'Delicious Handrawn', cursive;
+    margin: 0;
+    padding: 0px;
+}
+header{
+    /*background-color: burlywood;
+    background-image: url("img/headerull.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+    background-color: antiquewhite;*/
+    background-color: rgba(193, 206, 203);
+    padding: 20px;
+}
+body ::selection{
+  background:lightblue;
+}
+  h1{
+    display: flex;
+    justify-content: center;
+    font-size: 300%;
+  }
+p{
+  padding: 20px;
+}
+  .intro{
+    text-align: center;
+    font-size: 200%;
+  background-image: url("img/strandbakgrund.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 180%;
+  padding: 100px;
+  color: white;
+    
+  }
+  @media screen and (max-width: 546px){
+    .intro{
+      font-size: 150%;
+      padding: 30px;
+    }
+  }
+
+  /* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    /*background-color: rgba(175, 188, 219);
+    color: rgba(22, 40, 43);*/
+    background-color:rgba(63, 114, 126);
+    color: antiquewhite;
+    cursor: pointer;
+    padding: 40px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    /*background-color: rgba(195, 229, 235);*/
+    background-color: rgba(177, 208, 213);
+    color: black;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+
+.tabs{
+    font-size: 100%;
+}
+.accordion:hover #verktyg{
+  background-color:cornflowerblue;
+}
+.innehåll{
+    font-size: 200%;
+    padding: 20px;
+  }
+  .totoro{
+    font-size: 200%;
+    color: black;
+  }
+.accordion{
+    font-size: 300%;
+}
+.imghåll{
+  width: 50%;
+  display: block;
+  margin: auto;
+}
+.bildtext{
+  text-align: center;
+  font-size: 200%;
+  font-style: italic;
+}
+@media screen and (max-width: 900px) {
+  .imghåll{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 314px){
+  .accordion{
+    font-size: 200%;
+  }
+  .slut {
+    font-size: 100%;
+    padding: 50px;
+  }
+}
+/*Heltäckande meny*/
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    /*background-image: url(img/menybakgrund.png);
+    background-position: center;
+  background-repeat: no-repeat;*/
+  background-color:rgba(28, 59, 58);
+    overflow-x: hidden; /* Disable horizontal scroll */ 
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 400%;
+    color: antiquewhite;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    right: 45px;
+    font-size: 1000%;
+    color: antiquewhite;
+  }
+
+  .meny{
+    font-size: 300%;
+    color: black;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+.totoro{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+.inspo{
+  font-size: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 2px;
+  }
+
+  .column{
+    flex: 25%;
+    max-width: 25%;
+  }
+  .column img{
+    vertical-align: middle;
+    width: 100%;
+  }
+  @media screen and (max-width: 800px) {
+    .column{
+        flex: 50%;
+        max-width: 50%;
+    }
+  }
+  @media screen and (max-width: 600px){
+    .column{
+        flex: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+  /*Media query som gör att bildgalleriet byts ut mot ett bildspel istället*/
+@media screen and (max-width: 600px){
+  .row{
+    display: none;
+  }
+}
+#fråga{
+  font-size: 200%;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+input{
+  font-size: 150%;
+  padding: 20px;
+}
+.frågeruta{
+  display: flex;
+  justify-content: center;
+}
+textarea{
+  font-size: 150%;
+  padding: 10px;
+}
+
+.slut{
+  font-size: 200%;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  background-color: rgba(129, 156, 122);
+}
+.slut a{
+  color: antiquewhite;
+}
+
+/*Kod som tillhör bildspelet som ska dyka upp när skärmen blir mindre*/
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+.mySlides img{
+  width: 100%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(44, 74, 60);
+}
+
+/* Caption text */
+.text {
+  display: none;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  font-size: 180%;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@media screen and (min-width: 600px){
+  .slideshow-container{
+    display: none;
+  }
+}
+
+/*Slut på kod som tillhör bildspel*/
+
+/*Kod som tillhör historia.html*/
+
+#home{
+  width: 70px;
+  float: right;
+  }
+  #hem{
+    float: right;
+    font-size: 150%;
+    color: white;
+  }
+
+.användningh2{
+  padding: 10px;
+  background-color: rgba(63, 114, 126);
+}
+.användning{
+  background-color: rgba(193, 206, 203);
+}
+.användningp{
+  padding: 30px;
+margin-top:auto;
+margin-bottom: auto;
+background-color: rgba(193, 206, 203);
+}
+.hatt{
+  width: 100%;
+}
+p{
+  font-size: 150%;
+}
+h2{
+  font-size: 200%;
+}
+.utvecklingh2{
+  display: flex;
+  justify-content: center;
+  background-color: rgba(63, 114, 126);
+  padding: 10px;
+  color: black;
+}
+.utvecklingp{
+  background-color: rgba(193, 206, 203);
+}
+.utvecklingskansen{
+  background-color: rgba(193, 206, 203);
+  margin-top:auto;
+  margin-bottom: auto;
+}
+.skansen{
+  width: 100%;
+}
+#historiameny{
+  color: white;
+}
+.historiaheader{
+  background-color: rgba(28, 59, 58);
+}
